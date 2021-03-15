@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Cormorant Upright", serif;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.banner {
+  width: 100%;
+}
+.navbar {
+  font-size: 1.8em;
+  background-color: #f5c9b2;
+}
+.navbar-right {
+  font-size: 0.6em;
+}
+.logo {
+  max-width: 100%;
+  max-height: 200%;
+  margin-top: -20%;
+}
+
+.form-inline {
+  text-align: center;
+  width: 100%;
+}
+
+.btn {
+  background-color: #fead89 !important;
+}
+
+.navbar-toggle {
+  float: left;
+  color: black;
+}
+
+/*products content*/
+
+.products-content {
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 3%;
+}
+.main-content {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  max-height: 300px;
+}
+
+.news {
+  height: 300px;
+}
+.footer {
+  font-size: larger;
+  font-weight: bold;
+}
+#footer-item {
+  width: 40%;
+  height: 40%;
+}
+.media-wrap {
+  float: left;
+}

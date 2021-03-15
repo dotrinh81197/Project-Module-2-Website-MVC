@@ -1,0 +1,34 @@
+.menu {
+  width: 100%;
+  border: #008362;
+}
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 0 !important;
+}
+.menu .menu-item {
+  list-style-type: none;
+  text-align: justify;
+  padding: 1em;
+}
+.menu ul li a {
+  text-decoration: none;
+  font-size: 1.4em;
+  font-weight: bolder;
+}
+
+.menu-item:hover a {
+  color: #ff8c5b !important;
+}
+
+/*Shopping cart*/
+.shopping-cart li {
+  flex-direction: column;
+  display: block;
+}
+.shopping-cart li i {
+  flex-direction: column;
+  display: block;
+  text-align: center;
+}

@@ -1,0 +1,32 @@
+.services {
+  vertical-align: baseline;
+  text-align: center;
+  font-size: larger;
+  font-weight: 400;
+}
+.services img {
+  width: 30%;
+  height: 30%;
+  text-align: center;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.services img:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+/*footer*/
+.copyright {
+  text-align: center;
+}
+.fllowus {
+  font-size: 20px;
+}
