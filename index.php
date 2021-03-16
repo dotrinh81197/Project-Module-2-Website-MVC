@@ -1,5 +1,5 @@
 <?php
-
+ 
 session_start();
 // Lấy được request yêu cầu đến controller và action
 $controller =  isset($_GET["controller"]) ? $_GET["controller"] :  null;

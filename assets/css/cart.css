@@ -190,3 +190,15 @@
     height: 20%;
   }
 }
+
+.cart-item{
+  font-size: 1.4em;
+  font-weight: 500;
+  padding-top: 4em;
+}
+h1{
+  text-align: center;
+}
+td{
+  width: 150px;
+}

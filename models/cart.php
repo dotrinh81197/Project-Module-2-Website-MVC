@@ -5,7 +5,7 @@ require_once("./db.php");
 
 class Carts
 {
-
+    public $id;
     public $name;
     public $brand;
     public $weight;
@@ -14,12 +14,12 @@ class Carts
     public $ageRange;
     public $image_url;
     public $category;
-
+    
 
 
     static function findbyid($id)
     {
-        $sql = "SELECT t1.product_name, t1.sell_price, t1.sale_price, t1.image_url , t2.category_name AS category
+        $sql = "SELECT t1.product_id, t1.product_name, t1.sell_price, t1.sale_price, t1.image_url , t2.category_name AS category
         FROM products t1
         LEFT JOIN categories t2
         ON t1.category_id = t2.category_id

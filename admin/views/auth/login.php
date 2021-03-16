@@ -16,14 +16,14 @@
 
     <!-- web font -->
     <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
-    <!-- //web font -->
+
 </head>
 
-<body>
+<body style="background-image: url('/admin/assets/images/pet.jpg');">
 
     <!-- main -->
     <div class="main-w3layouts wrapper">
-        <h1>Pet's Store </h1>
+        <h1 > Zyn's pet Store </h1>
         <div class="main-agileinfo">
             <div class="agileits-top">
 

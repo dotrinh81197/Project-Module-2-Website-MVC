@@ -49,7 +49,10 @@ Utils::showMessage();
                 <label for="exampleFormControlInput1">Giá bán</label>
                 <input type="number" class="form-control" name="sell_price" id="exampleFormControlInput1" value="<?php echo $product->sell_price ?>" required min="0" step="0.01" value="0" />
             </div>
-
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Giá sale</label>
+                <input type="number" class="form-control" name="sale_price" id="test"  value="<?php echo $product->sale_price ?>" required min="0" step="0.01" value="0.01" />
+            </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Khối lượng</label>
                 <input type="text" class="form-control" name="weight" id="exampleFormControlInput1" value="<?php echo $product->weight ?>" required="" />

@@ -51,7 +51,7 @@
                 <li class="menu-item"><a href="#">Tin tức</a></li>
                 <li class="menu-item"><a href="#">Đơn hàng</a></li>
                 <div class="shopping-cart">
-                    <li class="menu-item"> <a href="?controller=cart&action=store&id=<?php echo $product->id ?>">Giỏ hàng </a> <a><i class="fas fa-shopping-cart"></i></a></li>
+                    <li class="menu-item"> <a href="?controller=cart&action=index">Giỏ hàng </a> <a><i class="fas fa-shopping-cart"></i></a></li>
                 </div>
 
             </ul>

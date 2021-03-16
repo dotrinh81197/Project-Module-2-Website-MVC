@@ -203,7 +203,8 @@ img {
 
 /*-- end reset --*/
 body {
-  background: #76b852;
+  background-image:inherit;
+  
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #76b852, #8dc26f);
   background: -moz-linear-gradient(to top, #76b852, #8dc26f);
@@ -217,7 +218,7 @@ body {
 h1 {
   font-size: 3em;
   text-align: center;
-  color: #fff;
+  color: red;
   font-weight: 100;
   text-transform: capitalize;
   letter-spacing: 4px;
@@ -230,7 +231,7 @@ h1 {
 }
 
 .main-agileinfo {
-  width: 35%;
+  width: 25%;
   margin: 3em auto;
   background: rgba(0, 0, 0, 0.18);
   background-size: cover;
@@ -238,6 +239,7 @@ h1 {
 
 .agileits-top {
   padding: 3em;
+ 
 }
 
 input[type="text"],

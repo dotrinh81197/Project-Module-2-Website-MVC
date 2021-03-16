@@ -60,6 +60,11 @@ Utils::showMessage();
       </div>
 
       <div class="form-group">
+        <label for="exampleFormControlInput1">Giá sale</label>
+        <input type="number" class="form-control" name="sale_price" id="test" placeholder="VND" required min="0" step="0.01" value="0.01" />
+      </div>
+
+      <div class="form-group">
         <label for="exampleFormControlInput1">Giá khuyến mãi</label>
         <input type="number" class="form-control" name="sale_price" id="test" placeholder="VND" required min="0" step="0.01" value="0.01" />
       </div>

@@ -17,28 +17,34 @@ class CartController extends BaseController
     }
     public function delete()
     {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $id = $_POST['id'];
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                      
+            $id = $_GET['id'];
             unset($_SESSION['cart'][$id]);
+            $data = $_SESSION['cart'];
+            $viewData = ["carts" =>$data];
+            $this->render("index", $viewData, "products_layout");
         }
     }
 
     public function store()
     {
+        
         $id = $_GET['id'] ?? null;
         $product =  Carts::findbyid($id);
-
+       
         // nếu giỏ hàng không trống or không có tồn tại sản phẩm có id này
         if (empty($_SESSION['cart']) || !array_key_exists($id, $_SESSION['cart'])) {
             $product['qty'] = 1;
             $_SESSION['cart'][$id] = $product;
+            
         } else {
             // sản phẩm chưa tồn tại trong giỏ hàng
             $product['qty'] = $_SESSION['cart'][$id]['qty'] + 1;
             $_SESSION['cart'][$id] = $product;
         }
 
-        $_SESSION['message'] = "Thêm vào giỏ hàng thành công!";
+        $_SESSION['storeCartSuccess'] = "Thêm vào giỏ hàng thành công!";
         $data = $_SESSION['cart'];
         $viewData = ["carts" => $data];
         $this->render("index", $viewData, "products_layout");
