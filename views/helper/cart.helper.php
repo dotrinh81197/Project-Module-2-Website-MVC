@@ -18,7 +18,7 @@ class CartHelper
             '<div class="col-md-3 col-sm-6 cart" >
                  <div class="product-grid3">
                     <div class="product-image3">
-                        <a href="#">
+                        <a href="?controller=product&action=detail&id=' . $product->id . '">
                             <img class="pic-1" src="' . $product->image_url . '">
                             <img class="pic-2" src="' . $product->image_url . '">
                            

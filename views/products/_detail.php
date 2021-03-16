@@ -31,12 +31,11 @@
                     <hr>
                     <div class="product-extra">
                         <div class="quantity-adder">
-                            Số lượng: <input class="slsp form-control" name="qty" type="text" id="qty" value="1" size="2">
-                            <span class="add-up add-action">+</span>
-                            <span class="add-down add-action">-</span>
-                            <input name="idtin" id="idtin" type="hidden" value="572">
+                            <div class="pull-left qty-number">
+
+                            </div>
                         </div>
-                        <a type="button" idtin="572" class="btn btn-success btn-lg adtocart" href="?controller=cart&action=store&id= <?php echo $product->category_id ?>">
+                        <a type="button" idtin="572" class="btn btn-success btn-lg adtocart" href="?controller=cart&action=store&id=<?php echo $product->id; ?>">
                             <i class="fa fa-shopping-cart"></i> Thêm vào giỏ </a>
                         <div class="product-action">
                             <div class="wishlish-compare">

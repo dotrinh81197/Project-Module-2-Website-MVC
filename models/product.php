@@ -359,4 +359,16 @@ class Products
         }
         return $list;
     }
+    // static function findbyid($id)
+    // {
+    //     $sql = "SELECT t1.product_name, t1.sell_price, t1.sale_price, t1.image_url , t2.category_name AS category
+    //     FROM products t1
+    //     LEFT JOIN categories t2
+    //     ON t1.category_id = t2.category_id
+    //     WHERE t1.product_id = $id;";
+    //     $statement = DB::getInstance()->prepare($sql);
+    //     $statement->execute();
+
+    //     return $rowdata = $statement->fetch();
+    // }
 }

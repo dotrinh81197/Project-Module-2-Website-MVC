@@ -98,7 +98,7 @@ Utils::showMessage();
   </div>
 </form>
 
-<script src="assets/js/script.js"></script>
+<script src="/admin/assets/js/script.js"></script>
 
 <script>
   const leftFormCol = document.querySelector("#left_form_col");

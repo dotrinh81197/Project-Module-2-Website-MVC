@@ -17,11 +17,14 @@
 }
 
 .product-title {
-  font-size: 20px;
+  font-size: 2em;
   font-weight: 700;
 }
 .product-brand {
   font-size: 18px;
+}
+.product-age {
+  font-size: large;
 }
 .product-price {
   font-size: 22px;
@@ -67,4 +70,14 @@
 .detail-item {
   max-width: 350px;
   max-height: 350px;
+}
+
+.product-info {
+  font-size: larger;
+}
+.content-wrapper {
+  padding-top: 5em;
+}
+.quantity-adder {
+  width: 10%;
 }

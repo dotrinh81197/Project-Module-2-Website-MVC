@@ -9,7 +9,7 @@ class AuthController extends BaseController
         return "auth";
     }
 
-    public  function logIn()
+    public  function login()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $this->submitLogin();
@@ -54,6 +54,7 @@ class AuthController extends BaseController
 
     public function showLoginPage()
     {
+
         $this->render("login", [], "auth_layout");
     }
 
