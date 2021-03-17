@@ -1,6 +1,7 @@
 .cart {
   max-height: 300px;
 }
+
 .product-grid3 {
   font-family: "Cormorant Upright", serif;
   text-align: center;
@@ -152,6 +153,9 @@
 .product-grid3 .rating li.disable {
   color: #dcdcdc;
 }
+.shopping-cart {
+  font-size: larger;
+}
 @media only screen and (max-width: 1200px) {
   .product-grid3 .rating {
     margin: 0;
@@ -191,14 +195,14 @@
   }
 }
 
-.cart-item{
+.cart-item {
   font-size: 1.4em;
   font-weight: 500;
-  padding-top: 4em;
+  padding-top: 1em;
 }
-h1{
+h1 {
   text-align: center;
 }
-td{
+td {
   width: 150px;
 }

@@ -2,37 +2,42 @@
   width: 100%;
   border: #5e96ae;
 }
+.navmenu {
+  background-color: rgb(252, 220, 214);
+  font-size: 1.2em;
+}
 .menu ul {
   display: inline-flex;
   flex-direction: row;
 }
 .menu .menu-item {
   list-style-type: none;
-  text-align: justify;
-  padding-left: 2em;
-  padding-right: 2em;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .menu ul li a {
   text-decoration: none;
   font-size: 1.4em;
-  font-weight: bolder;
 }
 .menu .sub-menu {
   display: none;
-  list-style-type: decimal;
+  list-style-type: none;
   font-size: 1em;
   font-weight: 100;
-  color: #ff8c5b !important;
+  text-align: left;
 }
 .menu .sub-menu li a {
   color: #ff8c5b !important;
 }
 .menu-item:hover > .sub-menu {
   display: block;
-  position: relative;
+  position: absolute;
 }
-
+.menu-item:hover > .clearfix {
+  background-color: #ff8c5b;
+}
 
 /*Shopping cart*/
 .shopping-cart li {

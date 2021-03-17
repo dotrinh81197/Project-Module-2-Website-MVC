@@ -74,6 +74,7 @@ require_once("models/product.php");
         <!--search-->
         <?php include_once("./views/layout/search.php") ?>
 
+
     </div>
     <?php
 
@@ -82,6 +83,16 @@ require_once("models/product.php");
 
     ?>
     <div class="container">
+        <div class="alert alert-success" style="float: right;" role="alert">
+            <?php
+
+            if (isset($_SESSION['storeCartSuccess'])) {
+                echo $_SESSION['storeCartSuccess'];
+                unset($_SESSION['storeCartSuccess']);
+            }
+
+            ?>
+        </div>
         <div class="products-content">
             <h2>Sản phẩm cho chó</h2>
         </div>

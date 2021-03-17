@@ -1,9 +1,3 @@
-<?php
-require_once("./views/helper/cart.helper.php");
-require_once("models/product.php");
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,6 +15,7 @@ require_once("models/product.php");
     <link rel="stylesheet" href="assets/css/services.css">
     <link rel="stylesheet" href="assets/css/cart.css">
     <link rel="stylesheet" href="assets/css/detail.css">
+    <link rel="stylesheet" href="assets/css/order.css">
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -32,10 +27,7 @@ require_once("models/product.php");
 <body>
     <!--header-->
     <div class="container">
-
         <img id="header" style="width: 100%; height: 50%;" src="assets/lib/resouce/banner/banner2.png" alt="">
-
-
     </div>
 
     <!--nav-bar-->
@@ -77,7 +69,7 @@ require_once("models/product.php");
 
 
     </div>
-   
+
     <!--nav-menu-->
     <?php
 

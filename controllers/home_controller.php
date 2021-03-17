@@ -12,8 +12,8 @@ class HomeController extends BaseController
 
     public function index()
     {
-        $keyword = $_GET['keyword'];
 
+        $keyword = $_GET['keyword'];
         $data = new Products;
         $viewData = $data->search($keyword);
         $this->render("index", $viewData, "products_layout");

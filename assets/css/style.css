@@ -68,3 +68,50 @@ img {
 .media-wrap {
   float: left;
 }
+.btn-secondary {
+  background-color: rgb(163, 211, 253) !important;
+}
+td {
+  text-align: center;
+}
+.totals {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.btn-proceed-checkout {
+  width: 400px;
+  height: 50px;
+  background-color: #fead89;
+  font-size: larger;
+  color: brown;
+}
+.checkout {
+  text-align: center;
+  line-height: 1%;
+  font-size: larger;
+}
+.price {
+  text-align: center;
+  line-height: 1%;
+  font-size: x-large;
+}
+#qty {
+  width: 50%;
+  text-align: center;
+  line-height: 1%;
+  border: 1px;
+  border-radius: 2%;
+}
+.cart_delete {
+  border: 1px;
+}
+h2 {
+  text-align: center;
+  color: rgb(221, 105, 76);
+  font-weight: 700;
+}
+.page-title {
+  text-align: center;
+}
