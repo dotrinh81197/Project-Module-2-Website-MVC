@@ -8,6 +8,7 @@
                     echo '<div class="alert alert-success" role="alert">
                    ' . $_SESSION['checkout_success'] . '
                  </div>';
+                    unset($_SESSION['checkout_success']);
                 } ?>
                 <h2>Không có sản phẩm trong giỏ hàng </h2>
                 <button type="button" class="btn btn-outline-info"><a href="?controller=home&action=welcome">Tiếp tục mua hàng</a></button>
