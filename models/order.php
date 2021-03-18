@@ -43,10 +43,10 @@ class Order
             $this->customer_address = $customer_address,
         ]);
 
-        $sql = "SELECT * FROM customer; ";
+        $sql = "SELECT * FROM customer ORDER BY customer_id DESC LIMIT 1 ; ";
         $stm = DB::getInstance()->prepare($sql);
         $stm->execute();
-        return $rowdata = $stm->fetchAll();
+        return $rowdata = $stm->fetch();
     }
 
     static function storeOrderDetail($order_id, $product_id, $product_name, $price, $qty)

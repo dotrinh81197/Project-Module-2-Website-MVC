@@ -33,8 +33,9 @@
 }
 .menu-item:hover > .sub-menu {
   display: block;
-  position: absolute;
+  position: relative;
 }
+
 .menu-item:hover > .clearfix {
   background-color: #ff8c5b;
 }

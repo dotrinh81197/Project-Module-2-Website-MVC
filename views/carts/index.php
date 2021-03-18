@@ -10,7 +10,7 @@
                  </div>';
                 } ?>
                 <h2>Không có sản phẩm trong giỏ hàng </h2>
-                <button type="button" class="btn btn-outline-info"><a href="">Tiếp tục mua hàng</a></button>
+                <button type="button" class="btn btn-outline-info"><a href="?controller=home&action=welcome">Tiếp tục mua hàng</a></button>
             <?php else : ?>
         </div>
         <div class="cart-item">

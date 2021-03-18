@@ -28,7 +28,7 @@ class OrderController extends BaseController
             $customer_order = new Order();
             $customer =  $customer_order->storeCustomerOrder($customer_name, $customer_email, $customer_phone, $customer_address);
             //  { ["customer_id"]=> string(1) "1" [0]=> string(1) "1" ["customer_name"]=> string(11) "Đỗ Trinh" [1]=> string(11) "Đỗ Trinh" ["customer_email"]=> string(17) "dotrinh@gmail.com" [2]=> string(17) "dotrinh@gmail.com" ["customer_phone"]=> string(9) "091331041" [3]=> string(9) "091331041" ["customer_address"]=> string(6) "24 NTV" [4]=> string(6) "24 NTV" }h hàng order là 1 mảng 
-            $customer_id = $customer[0]['customer_id'];
+            $customer_id = $customer['customer_id'];
             $order = $customer_order::storeOrders($customer_id);
             $order_id = $order['order_id'];
 

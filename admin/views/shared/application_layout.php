@@ -66,9 +66,6 @@
                         ';
                         }
                         ?>
-
-
-
                     </div>
                 </div>
             </nav>
@@ -106,32 +103,25 @@
             </div>
             <!-- Sidebar Navigation Menus-->
             <div class="main-menu">
-                <h5 class="sidenav-heading">Main</h5>
+                <h5 class="sidenav-heading">Trang chính</h5>
                 <ul id="side-main-menu" class="side-menu list-unstyled">
                     <li>
-                        <a href="?controller=home&action=welcome"> <i class="icon-home"></i>Home</a>
+                        <a href="?controller=home&action=welcome"> <i class="icon-home"></i>Trang chủ</a>
                     </li>
                     <li>
-                        <a href="?controller=product&action=index"> <i class="icon-form"></i>Products </a>
+                        <a href="?controller=product&action=index"> <i class="icon-form"></i>Danh sách sản phẩm </a>
                     </li>
                     <li>
-                        <a href="?controller=categories&action=index"> <i class="fas fa-store"></i> Categories </a>
+                        <a href="?controller=categories&action=index"> <i class="fas fa-store"></i> Thể loại </a>
                     </li>
                     <li>
-                        <a href="?controller=bill&action=index"> <i class="fas fa-file-invoice-dollar"></i></i> Bills </a>
+                        <a href="?controller=order&action=index"> <i class="fas fa-file-invoice-dollar"></i></i> Đơn hàng </a>
                     </li>
 
                 </ul>
             </div>
             <!--Phan quyen Admin quan ly thanh vien-->
-            <div class="admin-menu">
-                <h5 class="sidenav-heading">Second menu</h5>
-                <ul id="side-admin-menu" class="side-menu list-unstyled">
-                    <li>
-                        <a href="#"> <i class="far fa-user"></i>Employee </a>
-                    </li>
-                </ul>
-            </div>
+
         </div>
     </nav>
 
