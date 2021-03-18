@@ -1,3 +1,6 @@
+<?php
+date_default_timezone_set('Asia/Bangkok');
+?>
 <h1>Danh sách đơn hàng</h1>
 <table class="table table-striped">
     <thead>
@@ -17,8 +20,17 @@
 
 
                 <tr>
-                    <td><?php echo  $order[$key]->order_id ?></td>
-                    <td><?php echo $order[$key]->created_at ?></td>
+                    <td>
+                        <?php 
+                            echo  $order[$key]->order_id 
+                        ?>
+                    </td>
+                    <td>
+                        <?php 
+                            $date = date(strtotime($order[$key]->created_at));   
+                            echo date('H:i:s d/m/Y');
+                        ?>
+                    </td>
                     <td><?php if ($order[$key]->status == '0') {
                             echo "<span class=status>Đang chờ</span>";
                         } else {
