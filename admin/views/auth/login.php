@@ -23,12 +23,20 @@
 
     <!-- main -->
     <div class="main-w3layouts wrapper">
-        <h1 > Zyn's pet Store </h1>
+        <h1> Zyn's pet Store </h1>
         <div class="main-agileinfo">
             <div class="agileits-top">
 
                 <form action="?controller=auth&action=login" method="POST">
+                    <h5> <?php
 
+                            if (isset($_SESSION['msg'])) {
+                                $msg = $_SESSION['msg'];
+
+                                echo $msg;
+                                unset($_SESSION['msg']);
+                            }
+                            ?></h5>
                     <input class="text" type="text" name="username" placeholder="Username" required="">
                     <input class="text" type="password" name="password" placeholder="Password" required="">
                     <div class="clear" style="color: red;">

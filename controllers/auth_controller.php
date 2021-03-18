@@ -25,7 +25,7 @@ class AuthController extends BaseController
             User::removeAuthUser();
 
             // Điều hướng về trang đăng nhập
-            header("Location:?controller=auth&action=login");
+            header("Location:?controller=home&action=welcome");
         }
     }
 
@@ -60,25 +60,25 @@ class AuthController extends BaseController
 
     public function register()
     {
+        $this->render("register", [], "auth_layout");
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $username = $_POST['username'];
             $password = $_POST['password'];
             $email = $_POST['email'];
 
-            $user = new User($username, $password, $email);
-            if ($this->UserDb->checkExistUsername($user->username)) {
+            $user = new User();
+            if (User::checkExistUsername($username)) {
 
                 $msg['msg'] = "* Username already exist";
 
-
-                header('Location:'  . "view/register.php?msg=" . $msg['msg']);
+                header('Location:' . "view/register.php?msg=" . $msg['msg']);
             } else {
-                if ($this->UserDb->checkExistEmail($user->email)) {
+                if (User::checkExistEmail($user->email)) {
                     $msg['msg'] = "* Email already exist";
 
                     header('Location:'  . "view/register.php?msg=" . $msg['msg']);
                 } else {
-                    $this->UserDb->signUp($user);
+                    User::signUp($user);
                     $msg['msg'] = "* Sign Up success";
 
                     header('Location:'  . "view/login.php?msg=" . $msg['msg']);

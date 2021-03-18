@@ -41,33 +41,63 @@ class User
     // Tìm người dùng với username và password, nếu trả về null thì là không tìm thấy
     static function removeAuthUser()
     {
+        unset($_SESSION["username"]);
         unset($_SESSION["auth"]);
     }
+    static function checkExistUsername($username)
+    {
 
-    // Lưu thông tin người dùng đã đăng nhập: storeAuthUser
-    // Return Type: void
-    // Params: $user: User
-    // static function storeAuthUser($user)
-    // {
-    //     $_SESSION[AUTH_KEY] = serialize($user);
+        $sql = "SELECT * FROM `user` WHERE `username`= '$username'";
+        $statement = DB::getInstance()->prepare($sql);
+        $statement->execute();
 
-    //     var_dump($user);
-    // }
+        $result = $statement->fetchAll();
 
-    // // Lấy thông tin người dùng đã đăng nhập: getAuthUser
-    // // Return Type: User
-    // static function getAuthUser()
-    // {
-    //     return isset($_SESSION[AUTH_KEY]) ? unserialize($_SESSION[AUTH_KEY]) : null;
-    // }
+        if (isset($result) && count($result) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+    // check exists user to login
+    static function checkExistUser($username, $password)
+    {
 
-    // // xóa thông tin người dùng đã đăng nhập: removeAuthUser
-    // static function removeAuthUser()
-    // {
-    //     unset($_SESSION[AUTH_KEY]);
-    // }
+        $sql = "SELECT * FROM `user` WHERE  `username`='$username' AND `password`= '$password' ";
+        $statement = DB::getInstance()->prepare($sql);
+        $statement->execute();
 
+        $result = $statement->fetchAll();
 
+        if (isset($result) && count($result) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+    static function checkExistEmail($email)
+    {
+
+        $sql = "SELECT * FROM `user` WHERE `email`= '$email'";
+        $statement = DB::getInstance()->prepare($sql);
+        $statement->execute();
+        $result = $statement->fetchAll();
+        var_dump($result);
+        if (isset($result) && COUNT($result) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    static function signUp($username, $password, $email)
+    {
+        $sql = "INSERT INTO user (username,password,email)
+       VALUES('$username','$password','$email');";
+        $statement = DB::getInstance()->prepare($sql);
+
+        return   $statement->execute();
+    }
 }

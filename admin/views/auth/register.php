@@ -14,14 +14,16 @@
     <!-- //web font -->
 </head>
 
-<body>
+<body style="background-image: url('/admin/assets/images/pet.jpg');">
+
     <!-- main -->
+
 
     <div class="main-w3layouts wrapper">
         <h1>SignUp Form</h1>
         <div class="main-agileinfo">
             <div class="agileits-top">
-                <form action="\?controller=user&action=register" method="POST">
+                <form action="/admin?controller=auth&action=register" method="POST">
                     <input class="text" type="text" name="username" placeholder="Username" required="">
                     <input class="text email" type="email" name="email" placeholder="Email" required="">
                     <input class="text" type="password" name="password" placeholder="Password" required="">
@@ -35,10 +37,11 @@
                     <div style="width:max-content; height: max-content">
                         <?php
 
-                        if (isset($_GET['msg'])) {
-                            $msg = (($_GET['msg']));
+                        if (isset($_SESSION['msg'])) {
+                            $msg = $_SESSION['msg'];
 
-                            echo "<span>.$msg.</span>";
+                            echo "<span style='color:red'>.$msg.</span>";
+                            unset($_SESSION['msg']);
                         }
                         ?>
                     </div>

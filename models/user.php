@@ -41,6 +41,7 @@ class User
     // Tìm người dùng với username và password, nếu trả về null thì là không tìm thấy
     static function removeAuthUser()
     {
+        unset($_SESSION["username"]);
         unset($_SESSION["auth"]);
     }
 

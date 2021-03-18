@@ -9,7 +9,7 @@ class AuthController extends BaseController
         return "auth";
     }
 
-    public  function logIn()
+    public  function login()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $this->submitLogin();
@@ -59,78 +59,30 @@ class AuthController extends BaseController
 
     public function register()
     {
+        $this->render("register", [], "auth_layout");
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $username = $_POST['username'];
             $password = $_POST['password'];
             $email = $_POST['email'];
 
-            $user = new User($username, $password, $email);
-            if ($this->UserDb->checkExistUsername($user->username)) {
+            $user = new User();
+            if (User::checkExistUsername($username)) {
 
-                $msg['msg'] = "* Username already exist";
+                $_SESSION['msg'] = "* Username already exist";
 
-
-                header('Location:'  . "view/register.php?msg=" . $msg['msg']);
+                header("Location:?controller=auth&action=register");
             } else {
-                if ($this->UserDb->checkExistEmail($user->email)) {
-                    $msg['msg'] = "* Email already exist";
+                if (User::checkExistEmail($email)) {
+                    $_SESSION['msg'] = "* Email already exist";
 
-                    header('Location:'  . "view/register.php?msg=" . $msg['msg']);
+                    header("Location:?controller=auth&action=register");
                 } else {
-                    $this->UserDb->signUp($user);
-                    $msg['msg'] = "* Sign Up success";
+                    User::signUp($username, $password, $email);
+                    $_SESSION['msg'] = "* Sign Up success";
 
-                    header('Location:'  . "view/login.php?msg=" . $msg['msg']);
+                    header("Location:?controller=auth&action=login");
                 }
             }
-        }
-    }
-
-    public function checkExistUsername($username)
-    {
-
-        $sql = "SELECT * FROM `user` WHERE `username`= '$username'";
-        $statement = $this->connection->prepare($sql);
-        $statement->execute();
-
-        $result = $statement->fetchAll();
-
-        if (isset($result) && count($result) > 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    // check exists user to login
-    protected function checkExistUser($username, $password)
-    {
-
-        $sql = "SELECT * FROM `user` WHERE  `username`='$username' AND `password`= '$password' ";
-        $statement = $this->connection->prepare($sql);
-        $statement->execute();
-
-        $result = $statement->fetchAll();
-
-        if (isset($result) && count($result) > 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    protected function checkExistEmail($email)
-    {
-
-        $sql = "SELECT * FROM `user` WHERE `email`= '$email'";
-        $statement = $this->connection->prepare($sql);
-        $statement->execute();
-        $result = $statement->fetchAll();
-        var_dump($result);
-        if (isset($result) && COUNT($result) > 0) {
-            return true;
-        } else {
-            return false;
         }
     }
 }
