@@ -20,8 +20,6 @@ $cartHelper = new CartHelper($products);
                 }
             }
 
-
-
             ?>
         </h2>
     </div>
