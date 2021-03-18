@@ -27,11 +27,23 @@ $sum = 0;
                         $qty = $order_detail['product_qty'];
                         $total = $price * $qty;
                         ?>
-                        <td><?php echo  $order_detail['order_id'] ?></td>
-                        <td><?php echo $order_detail['product_name'] ?></td>
-                        <td><?php echo number_format($price) ?></td>
-                        <td><?php echo  $qty ?></td>
-                        <td><?php echo number_format($total) ?></td>
+                        <td>
+                            <?php echo  $order_detail['order_id']
+                            ?>
+                        </td>
+                        <td>
+                            <?php echo $order_detail['product_name']
+                            ?>
+                        </td>
+                        <td>
+                            <?php echo number_format($price)
+                            ?>
+                        </td>
+                        <td>
+                            <?php echo  $qty ?></td>
+                        <td>
+                            <?php echo number_format($total) ?>
+                        </td>
 
                 </tr>
                 <?php $sum += $total; ?>
@@ -85,5 +97,5 @@ $sum = 0;
     </div>
 </div>
 <div>
-    
+
 </div>

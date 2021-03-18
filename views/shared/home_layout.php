@@ -96,7 +96,7 @@ require_once("models/product.php");
         <div class="products-content">
             <h2>Sản phẩm cho chó</h2>
         </div>
-        <div class="row " style="height: 300px;">
+        <div class="row " style="height: 100%;">
 
             <?php
 
@@ -125,7 +125,7 @@ require_once("models/product.php");
         <div class="products-content">
             <h2>Sản phẩm khuyến mãi</h2>
         </div>
-        <div class="row  main-content" style="height: 300px;">
+        <div class="row  main-content" style="height: 100%;">
             <?php
             $products = Products::getbySellPrice(4);
             $cartHelper = new CartHelper($products);
@@ -140,7 +140,7 @@ require_once("models/product.php");
         <div class="products-content">
             <h2>Sản phẩm vệ sinh thú cưng</h2>
         </div>
-        <div class="row  main-content" style="height: 300px;">
+        <div class="row  main-content" style="height: 100%;">
 
             <?php
             $products = Products::getbyCategory(7, 4);

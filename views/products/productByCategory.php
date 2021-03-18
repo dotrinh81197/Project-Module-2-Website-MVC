@@ -25,12 +25,10 @@ $cartHelper = new CartHelper($products);
             ?>
         </h2>
     </div>
-    <div class="row " style="height: 300px;">
-
+    <div class="row " style="height: 100%;">
         <?php
         $cartHelper = new CartHelper($products);
         echo $cartHelper->renderItems($products);
-
         ?>
     </div>
 

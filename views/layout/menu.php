@@ -1,8 +1,9 @@
 <div class="container">
     <div class=" menu">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myMenu">
-            <a class="navbar-brand " type="button" href="#">Menu</a>
-
+      
+        <a class="navbar-brand" href="#">Menu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myMenu" aria-controls="myMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
 
         <nav class="navbar navbar-expand-sm navmenu">
