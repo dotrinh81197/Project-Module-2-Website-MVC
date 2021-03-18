@@ -1,12 +1,9 @@
 <div class="container">
     <div class=" menu">
-      
-        <a class="navbar-brand" href="#">Menu</a>
+     <nav class="navbar navbar-expand-sm navmenu">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myMenu" aria-controls="myMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">Menu</span>
         </button>
-
-        <nav class="navbar navbar-expand-sm navmenu">
             <div class="collapse navbar-collapse" id="myMenu">
                 <ul class="clearfix">
                     <li class="menu-item">
