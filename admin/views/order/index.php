@@ -47,9 +47,9 @@
     </tbody>
 </table>
 <script>
-    document.querySelectorAll("td.date-convert"").forEach(e=>{
+    document.querySelectorAll("td.date-convert").forEach(e=>{
         let date = new Date(e.innerText);
-        date.setHours(t.getHours() + 7);
+        date.setHours(date.getHours() + 7);
         e.innerText = date.toLocaleString("vi");
     })
 </script>
