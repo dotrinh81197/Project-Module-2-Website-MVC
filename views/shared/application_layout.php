@@ -24,154 +24,21 @@
 <body>
   <!--header-->
   <div class="container">
-
     <img id="header" style="width: 100%; height: 50%;" src="assets/lib/resouce/banner/banner2.png" alt="">
-
-
   </div>
 
   <!--nav-bar-->
   <div class="container">
-    <nav class="navbar navbar-expand-md " style="margin-top: -5%;">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <a class="navbar-brand" href="#">---</a>
-
-          </button>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <a class="navbar-brand" href="#"><img class="logo" src="lib/resouce/banner/logo.png" alt=""></a>
-            <li class=""><a href="?controller=home&action=welcome">Trang chủ</a></li>
-            <li class=""><a href="#">Giới thiệu</a></li>
-            <li class=""><a href="#">Liên hệ</a></li>
-
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right" style="display: flex;flex-direction: row-reverse;">
-            <?php
-            if (isset($_SESSION["username"])) {
-
-              echo '<li class="nav-item"> <span>Hi ' . $_SESSION["username"] . ' </span><a href="?controller=auth&action=logout" class="nav-link logout"> <span class="d-sm-none d-xl-inline-block ">Logout</span><i class="fa fa-sign-out"></i></a></li>
-                        ';
-            } else {
-              echo '<li><a href="?controller=auth&action=login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
-            }
-            ?>
-            <!-- <li><a href="?controller=auth&action=register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
-          </ul>
-
-        </div>
-      </div>
-    </nav>
-    </nav>
-    <!--search-->
     <?php
+    include_once("./views/layout/navbar.php");
     include_once("./views/layout/search.php")
     ?>
     <!--banner-->
     <?php
     include_once "./views/layout/banner.php";
+    include_once("./views/layout/menu.php");
     ?>
-    <!--nav-menu-->
-
-    <div class="container">
-
-      <div class=" menu">
-
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myMenu">
-          <a class="navbar-brand" href="#"><span>Menu</span></a>
-
-        </button>
-        <div class="collapse navbar-collapse" id="myMenu">
-          <ul class="clearfix">
-            <li class="menu-item"><a href="#"> <i class="fa fa-paw"></i>Shop cho chó</a>
-
-              <ul class="clearfix">
-                <li class="menu-item">
-                  <a href="?controller=product&action=showByIntended&intended=cho">
-                    <i class="fa fa-paw"></i>
-                    Shop cho chó
-                  </a>
-
-                  <ul class="sub-menu">
-                    <li><a href="?controller=product&action=showByCategory&id=1">Thức ăn</a></li>
-                    <li><a href="?controller=product&action=showByCategory&id=2">Quần áo</a></li>
-                    <li><a href="?controller=product&action=showByCategory&id=3">Phụ kiện</a></li>
-                    <li><a href="?controller=product&action=showByCategory&id=12">Mỹ phẩm,làm đẹp</a></li>
-
-                  </ul>
-
-
-                </li>
-                <li class="menu-item">
-                  <a href="#"><i class="fa fa-paw"></i> Shop cho mèo </a>
-                  <ul class="sub-menu">
-                    <li><a href="?controller=product&action=showByCategory&id=1&intended=meo">Thức ăn</a></li>
-                    <li><a href="?controller=product&action=showByCategory&id=2&intended=meo">Quần áo</a></li>
-                    <li><a href="?controller=product&action=showByCategory&id=3">Phụ kiện</a></li>
-                    <li><a href="?controller=product&action=showByCategory&id=4&intended=meo">Giường, chuồng</a></li>
-                    <li><a href="?controller=product&action=showByCategory&id=12">Mỹ phẩm,làm đẹp</a></li>
-                  </ul>
-                </li>
-                <li class="menu-item">
-                  <a href="">Dịch vụ </a>
-
-                  <ul class="sub-menu">
-                    <li><a href="#">Cắt, tỉa lông</a></li>
-                    <li><a href="#">Tắm, massage, spa</a></li>
-                    <li><a href="#">Huấn luyện </a></li>
-                    <li><a href="#">Thú y </a></li>
-                  </ul>
-                </li>
-                <li class="menu-item"><a href="#">Tin tức</a></li>
-                <li class="menu-item"><a href="#">Đơn hàng</a></li>
-                <div class="shopping-cart">
-                  <li class="menu-item"> <a href="#">Giỏ hàng </a> <a><i class="fas fa-shopping-cart"></i></a></li>
-                </div>
-              </ul>
-
-
-            </li>
-            <li class="menu-item">
-              <a href="#"><i class="fa fa-paw"></i> Shop cho mèo </a>
-
-              <ul class="sub-menu">
-                <li><a href="#">Thức ăn</a></li>
-                <li><a href="#">Quần áo</a></li>
-                <li><a href="#">Phụ kiện</a></li>
-                <li><a href="#">Giường, chuồng</a></li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a href="#">Dịch vụ </a>
-
-              <ul class="sub-menu">
-                <li><a href="#">Cắt, tỉa lông</a></li>
-                <li><a href="#">Tắm, massage, spa</a></li>
-                <li><a href="#">Huấn luyện </a></li>
-                <li><a href="#">Thú y </a></li>
-              </ul>
-            </li>
-            <li class="menu-item"><a href="#">Tin tức</a></li>
-            <li class="menu-item"><a href="#">Đơn hàng</a></li>
-            <div class="shopping-cart">
-              <li class="menu-item"> <a href="?controller=cart&action=index">Giỏ hàng </a> <a><i class="fas fa-shopping-cart"></i></a></li>
-            </div>
-
-          </ul>
-        </div>
-
-      </div>
-    </div>
-    <!--end nav-menu-->
-
-
   </div>
-  <?php
-  include_once "./views/layout/banner.php";
-  ?>
 
   <div class="content">
 

@@ -18,9 +18,7 @@ img {
   font-size: 1.8em;
   background-color: #f5c9b2;
 }
-.navbar-right {
-  font-size: 0.6em;
-}
+
 .logo {
   max-width: 100%;
   max-height: 200%;
@@ -34,11 +32,6 @@ img {
 
 .btn {
   background-color: #fead89 !important;
-}
-
-.navbar-toggle {
-  float: left;
-  color: black;
 }
 
 /*products content*/

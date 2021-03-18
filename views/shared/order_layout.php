@@ -29,61 +29,23 @@
     <div class="container">
         <img id="header" style="width: 100%; height: 50%;" src="assets/lib/resouce/banner/banner2.png" alt="">
     </div>
-
     <!--nav-bar-->
     <div class="container">
-        <nav class="navbar navbar-expand-md ">
-            <div class=" container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <a class="navbar-brand" href="#">---</a>
-
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav">
-                        <a class="navbar-brand" href="#"><img class="logo" src="assets/lib/resouce/logo/logo.png" alt=""></a>
-                        <li class=""><a href="?controller=home&action=welcome">Trang chủ</a></li>
-                        <li class=""><a href="#">Giới thiệu</a></li>
-                        <li class=""><a href="#">Liên hệ</a></li>
-
-                    </ul>
-
-                    <ul class="nav navbar-nav navbar-right" style="display: flex;flex-direction: row-reverse;">
-                        <?php
-                        if (isset($_SESSION["username"])) {
-
-                            echo '<li class="nav-item"> <span>Hi! ' . $_SESSION["username"] . ' </span><a href="?controller=auth&action=logout" class="nav-link logout"> <span class="d-sm-none d-xl-inline-block ">Logout</span><i class="fa fa-sign-out"></i></a></li>
-                        ';
-                        } else {
-                            echo '<li><a href="?controller=auth&action=login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
-                        }
-                        ?> </ul>
-                </div>
-            </div>
-        </nav>
-        </nav>
-        <!-- end nav-bar-->
-        <!--search-->
-        <?php include_once("./views/layout/search.php") ?>
-
-
+        <?php
+        include_once("./views/layout/navbar.php");
+        include_once("./views/layout/search.php");
+        ?>
     </div>
-
     <!--nav-menu-->
     <?php
-
     include_once "./views/layout/menu.php";
     ?>
-
     <!--end nav-menu-->
     <?php
     if (isset($content)) {
         echo $content;
     }
     ?>
-
-
     <!--footer-->
     <div class="container  modal-footer">
         <div class="row footer">
