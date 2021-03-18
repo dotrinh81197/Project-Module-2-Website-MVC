@@ -10,7 +10,7 @@ class DB
         // kiểm tra nếu $connection = null thì khởi tạo $connection bằng PDO
         if (!isset($connection)) {
             try {
-                self::$connection = new PDO("mysql:host=localhost;dbname=website_manager", "trinh", "trinh");
+                self::$connection = new PDO("mysql:host=localhost;dbname=website_manager;charset=utf8mb4", "trinh", "trinh");
                 // set the PDO error mode to exception
                 self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 // echo "Connected successfully";
