@@ -41,7 +41,7 @@ class Order
         $sql = "SELECT *
         FROM order_detail t1
         INNER JOIN orders t2
-        ON t1.order_id = t2.order_id;";
+        ON t1.order_id = t2.order_id WHERE t1.order_id = $id ;";
         $statement = DB::getInstance()->prepare($sql);
         $statement->execute();
         return $rowdata = $statement->fetchAll();
