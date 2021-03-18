@@ -1,6 +1,3 @@
-<?php
-date_default_timezone_set('Asia/Bangkok');
-?>
 <h1>Danh sách đơn hàng</h1>
 <table class="table table-striped">
     <thead>
@@ -25,10 +22,9 @@ date_default_timezone_set('Asia/Bangkok');
                             echo  $order[$key]->order_id 
                         ?>
                     </td>
-                    <td>
+                    <td class="date-convert">
                         <?php 
-                            $date = date(strtotime($order[$key]->created_at));   
-                            echo date('H:i:s d/m/Y',$date);
+                            echo $order[$key]->created_at;
                         ?>
                     </td>
                     <td><?php if ($order[$key]->status == '0') {
@@ -50,3 +46,10 @@ date_default_timezone_set('Asia/Bangkok');
 
     </tbody>
 </table>
+<script>
+    document.querySelectorAll("td.date-convert"").forEach(e=>{
+        let date = new Date(e.innerText);
+        date.setHours(t.getHours() + 7);
+        e.innerText = date.toLocaleString("vi");
+    })
+</script>
