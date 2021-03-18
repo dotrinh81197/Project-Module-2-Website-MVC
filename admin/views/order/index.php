@@ -28,7 +28,7 @@ date_default_timezone_set('Asia/Bangkok');
                     <td>
                         <?php 
                             $date = date(strtotime($order[$key]->created_at));   
-                            echo date('H:i:s d/m/Y');
+                            echo date('H:i:s d/m/Y',$date);
                         ?>
                     </td>
                     <td><?php if ($order[$key]->status == '0') {
